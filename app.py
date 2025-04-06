@@ -62,14 +62,14 @@ try:
         df.drop(columns='id', inplace=True)
 
     # Check if model and encoders exist
-    required_files = ["voting_model.pkl", "label_encoder.pkl", "feature_encoders.pkl", "feature_columns.pkl"]
+    required_files = ["nb_model.pkl", "label_encoder.pkl", "feature_encoders.pkl", "feature_columns.pkl"]
     missing_files = [f for f in required_files if not os.path.exists(f)]
 
     if missing_files:
         st.error(f"❌ Missing required model or encoder files: {', '.join(missing_files)}")
     else:
         # Load model and encoders
-        model = joblib.load("voting_model.pkl")
+        model = joblib.load("nb_model.pkl")
         label_encoder = joblib.load("label_encoder.pkl")
         encoders = joblib.load("feature_encoders.pkl")
         feature_cols = joblib.load("feature_columns.pkl")
