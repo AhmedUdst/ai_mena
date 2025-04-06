@@ -27,7 +27,8 @@ try:
     df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
 
     # Drop 'id' if it exists
-    df = df.drop(columns=[col for col in df.columns if col.lower() == 'id'], errors='ignore')
+    if 'id' in df.columns:
+        df.drop(columns='id', inplace=True)
 
     st.success("✅ Dataset loaded from GitHub successfully!")
     st.subheader("📄 Data Preview")
@@ -48,7 +49,6 @@ try:
         st.subheader("🔮 Make a New Prediction")
         user_input = {}
         for col in feature_cols:
-            options = df[col].unique().tolist()
             if col in encoders:
                 input_val = st.selectbox(f"{col}", list(encoders[col].classes_))
                 user_input[col] = encoders[col].transform([input_val])[0]
