@@ -62,10 +62,12 @@ try:
     selected_col = st.selectbox("Select a column to explore", df.columns)
 
     if df[selected_col].dtype == 'object':
-        st.write(df[selected_col].value_counts())
-        fig = px.bar(df[selected_col].value_counts().reset_index(), 
-                     x='index', y=selected_col, 
-                     labels={'index': selected_col, selected_col: 'Count'},
+        value_counts = df[selected_col].value_counts().reset_index()
+        value_counts.columns = [selected_col, 'count']
+        st.write(value_counts)
+        fig = px.bar(value_counts,
+                     x=value_counts[selected_col], y='count',
+                     labels={selected_col: selected_col, 'count': 'Count'},
                      title=f"Distribution of {selected_col}")
         st.plotly_chart(fig)
     else:
@@ -89,6 +91,14 @@ try:
         if len(pair_cols) > 1:
             fig = sns.pairplot(df[pair_cols])
             st.pyplot(fig)
+
+    # Gender vs Major Chart
+    st.subheader("🔹 Gender Distribution by Major")
+    if 'gender' in df.columns and 'field' in df.columns:
+        gender_major = df.groupby(['field', 'gender']).size().reset_index(name='count')
+        fig = px.bar(gender_major, x='field', y='count', color='gender', barmode='group',
+                     title='Major/Gender Breakdown')
+        st.plotly_chart(fig)
 
 except Exception as e:
     st.error(f"❌ Failed to load dataset from GitHub: {e}")
