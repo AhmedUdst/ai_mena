@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier, VotingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import CategoricalNB
 from xgboost import XGBClassifier
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, classification_report
 
 st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
 st.title("🎓 Predict Free Time Using ML")
@@ -22,7 +22,7 @@ Welcome to your interactive machine learning dashboard!
 """)
 
 # Load dataset from GitHub (fixed link)
-github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/refs/heads/main/dataset.csv"
+github_url = "https://raw.githubusercontent.com/yourusername/yourrepo/main/dataset.csv"
 try:
     response = requests.get(github_url)
     response.raise_for_status()
@@ -82,6 +82,12 @@ try:
             })
 
         st.dataframe(pd.DataFrame(summary))
+
+        st.subheader("📋 Classification Report (Voting Classifier)")
+        voting_clf.fit(X_train, y_train)
+        y_pred_voting = voting_clf.predict(X_test)
+        report = classification_report(y_test, y_pred_voting, output_dict=True)
+        st.dataframe(pd.DataFrame(report).transpose())
 
     else:
         st.warning("⚠️ Please select at least one feature column.")
