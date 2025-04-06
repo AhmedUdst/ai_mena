@@ -95,7 +95,9 @@ try:
     # Gender vs Major Chart
     st.subheader("🔹 Gender Distribution by Major")
     if 'gender' in df.columns and 'field' in df.columns:
-        gender_major = df.groupby(['field', 'gender']).size().reset_index(name='count')
+        df['field'] = df['field'].apply(lambda x: x if x in ['Business/Finance', 'Computer Science/IT', 'Engineering', 'Medicine/Healthcare'] else 'Other')
+        df['gender'] = df['gender'].apply(lambda x: x if x in ['Male', 'Female'] else 'Other')
+        gender_major = df[df['gender'].isin(['Male', 'Female'])].groupby(['field', 'gender']).size().reset_index(name='count')
         fig = px.bar(gender_major, x='field', y='count', color='gender', barmode='group',
                      title='Major/Gender Breakdown')
         st.plotly_chart(fig)
