@@ -7,6 +7,7 @@ import joblib
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, ConfusionMatrixDisplay
 
 st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
@@ -103,23 +104,25 @@ try:
                 predicted_label = label_encoder.inverse_transform(prediction)[0]
                 st.success(f"🕒 Predicted Free Time: {predicted_label}")
 
-                # Evaluation
-                y_true = label_encoder.transform(df[target_col])
-                X_encoded = df[feature_cols].copy()
+                # Evaluation on test set
+                y_all = label_encoder.transform(df[target_col])
+                X_all = df[feature_cols].copy()
                 for col in encoders:
-                    if col in X_encoded.columns:
-                        X_encoded[col] = encoders[col].transform(X_encoded[col])
-                y_pred_all = model.predict(X_encoded)
+                    if col in X_all.columns:
+                        X_all[col] = encoders[col].transform(X_all[col])
+                X_train, X_test, y_train, y_test = train_test_split(X_all, y_all, test_size=0.2, random_state=42)
+
+                y_pred = model.predict(X_test)
 
                 # Classification report
                 st.markdown("### 🧾 Classification Report")
-                report = classification_report(y_true, y_pred_all, target_names=label_encoder.classes_, output_dict=True)
+                report = classification_report(y_test, y_pred, target_names=label_encoder.classes_, output_dict=True)
                 st.dataframe(pd.DataFrame(report).transpose())
 
                 # Confusion matrix
                 st.markdown("### 🔍 Confusion Matrix")
                 fig, ax = plt.subplots(figsize=(6, 4))
-                ConfusionMatrixDisplay.from_predictions(y_true, y_pred_all, display_labels=label_encoder.classes_, ax=ax, cmap='Blues')
+                ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=label_encoder.classes_, ax=ax, cmap='Blues')
                 st.pyplot(fig)
 
                 # Feature importance
