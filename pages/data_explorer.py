@@ -37,7 +37,7 @@ if theme == "Dark":
 st.title("📊 Data Exploration Dashboard")
 
 # Load dataset from GitHub
-github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/dataset.csv"
+github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/clean_dataset.csv"
 
 try:
     response = requests.get(github_url)
@@ -66,7 +66,7 @@ try:
         value_counts.columns = [selected_col, 'count']
         st.write(value_counts)
         fig = px.bar(value_counts,
-                     x=value_counts[selected_col], y='count',
+                     x=selected_col, y='count',
                      labels={selected_col: selected_col, 'count': 'Count'},
                      title=f"Distribution of {selected_col}")
         st.plotly_chart(fig)
@@ -99,6 +99,11 @@ try:
         fig = px.bar(gender_major, x='field', y='count', color='gender', barmode='group',
                      title='Major/Gender Breakdown')
         st.plotly_chart(fig)
+
+        # Display as table
+        st.markdown("### 📋 Gender vs Major Table")
+        pivot_table = gender_major.pivot(index='field', columns='gender', values='count').fillna(0).astype(int)
+        st.dataframe(pivot_table)
 
 except Exception as e:
     st.error(f"❌ Failed to load dataset from GitHub: {e}")
