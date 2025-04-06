@@ -9,10 +9,35 @@ import plotly.express as px
 
 st.set_page_config(page_title="📊 Free Time Data Explorer", layout="wide")
 
+# Theme toggle in sidebar
+theme = st.sidebar.radio("🌗 Select Theme", ["Light", "Dark"])
+if theme == "Dark":
+    st.markdown(
+        """
+        <style>
+        body, .stApp, .css-ffhzg2 {
+            background-color: #0e1117;
+            color: #e1e1e1;
+        }
+        .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+            color: #f0f0f0;
+        }
+        .stButton>button {
+            background-color: #1f77b4;
+            color: white;
+        }
+        .stSelectbox, .stNumberInput input {
+            color: black !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 st.title("📊 Data Exploration Dashboard")
 
 # Load dataset from GitHub
-github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/dataset.csv"
+github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/clean_dataset.csv"
 
 try:
     response = requests.get(github_url)
