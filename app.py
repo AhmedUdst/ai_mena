@@ -48,7 +48,8 @@ Welcome to your interactive machine learning dashboard!
 """)
 
 # Load dataset from GitHub
-github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/refs/heads/main/dataset.csv"
+github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/clean_dataset.csv"
+
 
 try:
     response = requests.get(github_url)
