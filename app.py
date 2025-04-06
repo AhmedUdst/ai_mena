@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 import io
 import re
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier
@@ -19,6 +20,7 @@ Welcome to your interactive machine learning dashboard!
 - Data is auto-loaded from GitHub
 - Select features
 - Compare multiple ML models
+- Predict free time using trained model
 """)
 
 # Load dataset from GitHub (fixed link)
@@ -50,9 +52,12 @@ try:
         class_labels = label_encoder.classes_
 
         # Encode features
+        encoders = {}
         for col in feature_cols:
             if df[col].dtype == 'object':
-                df[col] = LabelEncoder().fit_transform(df[col].astype(str))
+                enc = LabelEncoder()
+                df[col] = enc.fit_transform(df[col].astype(str))
+                encoders[col] = enc
 
         X = df[feature_cols]
         y = df[target_col]
@@ -94,10 +99,29 @@ try:
         report = classification_report(y_test, y_pred_voting, output_dict=True)
         st.dataframe(pd.DataFrame(report).transpose())
 
-        # Show decoded predictions
-        st.subheader("🔮 Sample Predictions")
-        decoded_preds = label_encoder.inverse_transform(y_pred_voting[:10])
-        st.write(decoded_preds)
+        # Save trained model and encoders
+        joblib.dump(voting_clf, "voting_model.pkl")
+        joblib.dump(label_encoder, "label_encoder.pkl")
+        joblib.dump(encoders, "feature_encoders.pkl")
+
+        st.subheader("🔮 Make a New Prediction")
+        user_input = {}
+        for col in feature_cols:
+            options = df[col].unique().tolist()
+            if col in encoders:
+                reverse_map = {v: k for k, v in dict(zip(encoders[col].classes_, encoders[col].transform(encoders[col].classes_))).items()}
+                input_val = st.selectbox(f"{col}", list(encoders[col].classes_))
+                user_input[col] = encoders[col].transform([input_val])[0]
+            else:
+                user_input[col] = st.number_input(f"{col}", value=float(df[col].mean()))
+
+        if st.button("Predict Free Time"):
+            input_df = pd.DataFrame([user_input])
+            model = joblib.load("voting_model.pkl")
+            label_enc = joblib.load("label_encoder.pkl")
+            prediction = model.predict(input_df)
+            predicted_label = label_enc.inverse_transform(prediction)[0]
+            st.success(f"🕒 Predicted Free Time: {predicted_label}")
 
     else:
         st.warning("⚠️ Please select at least one feature column.")
