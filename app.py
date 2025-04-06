@@ -11,6 +11,24 @@ from sklearn.metrics import classification_report, ConfusionMatrixDisplay
 
 st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
 
+# Theme toggle in sidebar
+theme = st.sidebar.radio("🌗 Select Theme", ["Light", "Dark"])
+if theme == "Dark":
+    st.markdown(
+        """
+        <style>
+        body {
+            background-color: #0e1117;
+            color: #c7c7c7;
+        }
+        .stApp {
+            background-color: #0e1117;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 # Page header
 st.title("🎓 Predict Free Time Using ML")
 st.markdown("""
