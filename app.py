@@ -43,7 +43,7 @@ Welcome to your interactive machine learning dashboard!
 - 🧠 Predict free time instantly
 """)
 
-# GitHub dataset
+# GitHub dataset URL
 github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/clean_dataset.csv"
 
 try:
@@ -51,36 +51,37 @@ try:
     response.raise_for_status()
     df = pd.read_csv(io.StringIO(response.text))
 
-    # Clean column names
+    # ✅ Clean column names
     df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
 
+    # ✅ Drop ID if present
     if 'id' in df.columns:
         df.drop(columns='id', inplace=True)
 
-    # Load models
+    # ✅ Load model and encoders
     required_files = ["nb_model.pkl", "label_encoder.pkl", "feature_encoders.pkl", "feature_columns.pkl"]
     missing_files = [f for f in required_files if not os.path.exists(f)]
-    
+
     if missing_files:
-        st.error(f"❌ Missing model or encoder files: {', '.join(missing_files)}")
+        st.error(f"❌ Missing required files: {', '.join(missing_files)}")
     else:
         model = joblib.load("nb_model.pkl")
         label_encoder = joblib.load("label_encoder.pkl")
         encoders = joblib.load("feature_encoders.pkl")
         feature_cols = joblib.load("feature_columns.pkl")
         target_col = "free_time"
-        st.write("🧩 Feature columns expected by model:", feature_cols)
-        st.write("📋 Actual DataFrame columns:", df.columns.tolist())
 
+        # ✅ Subset columns
         df = df[[col for col in [target_col] + feature_cols if col in df.columns]].dropna().reset_index(drop=True)
 
+        # ✅ Check column alignment
         if all(col in df.columns for col in feature_cols + [target_col]):
             st.success("✅ Dataset loaded successfully!")
 
             with st.expander("📄 Preview Data"):
                 st.dataframe(df.head())
 
-            # Input section
+            # 🔮 Input UI
             st.subheader("🔮 Make a New Prediction")
             cols = st.columns(3)
             user_input = {}
@@ -89,13 +90,14 @@ try:
                     input_val = st.selectbox(f"{col}", list(encoders[col].classes_))
                     user_input[col] = encoders[col].transform([input_val])[0]
 
+            # 🔍 Prediction
             if st.button("📌 Predict Free Time"):
                 input_df = pd.DataFrame([user_input])
                 prediction = model.predict(input_df)
                 predicted_label = label_encoder.inverse_transform(prediction)[0]
                 st.success(f"🕒 Predicted Free Time: {predicted_label}")
 
-                # Evaluation
+                # 🔎 Evaluation
                 y_all = label_encoder.transform(df[target_col])
                 X_all = df[feature_cols].copy()
                 for col in encoders:
@@ -114,7 +116,7 @@ try:
                 st.pyplot(fig)
 
         else:
-            st.warning("⚠️ Dataset does not contain the required columns.")
+            st.warning("⚠️ Dataset is missing required columns!")
 
 except Exception as e:
     st.error(f"❌ Failed to load dataset from GitHub: {e}")
