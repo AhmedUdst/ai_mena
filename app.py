@@ -26,6 +26,10 @@ try:
     # Clean column names
     df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
 
+    # Drop 'id' if it exists
+    if 'id' in df.columns:
+        df.drop(columns='id', inplace=True)
+
     # Use fixed feature list to match the trained model
     target_col = "free_time"
     feature_cols = ['gender', 'field', 'impact_learing', 'knowledge', 'dependent', 'restriction', 'frequency', 'output']
