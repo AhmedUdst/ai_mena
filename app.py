@@ -61,9 +61,6 @@ try:
     required_files = ["nb_model.pkl", "label_encoder.pkl", "feature_encoders.pkl", "feature_columns.pkl"]
     missing_files = [f for f in required_files if not os.path.exists(f)]
     
-st.write("🧩 Feature columns expected by model:", feature_cols)
-st.write("📋 Actual DataFrame columns:", df.columns.tolist())
-
     if missing_files:
         st.error(f"❌ Missing model or encoder files: {', '.join(missing_files)}")
     else:
@@ -72,6 +69,8 @@ st.write("📋 Actual DataFrame columns:", df.columns.tolist())
         encoders = joblib.load("feature_encoders.pkl")
         feature_cols = joblib.load("feature_columns.pkl")
         target_col = "free_time"
+        st.write("🧩 Feature columns expected by model:", feature_cols)
+        st.write("📋 Actual DataFrame columns:", df.columns.tolist())
 
         df = df[[col for col in [target_col] + feature_cols if col in df.columns]].dropna().reset_index(drop=True)
 
