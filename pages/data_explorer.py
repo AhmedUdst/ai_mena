@@ -11,7 +11,7 @@ st.set_page_config(page_title="📊 Free Time Data Explorer", layout="wide")
 st.title("📊 Data Exploration Dashboard")
 
 # Load dataset from GitHub
-github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/clean_dataset.csv"
+github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/dataset.csv"
 
 try:
     response = requests.get(github_url)
