@@ -5,15 +5,20 @@ import io
 import re
 import joblib
 import os
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import classification_report, ConfusionMatrixDisplay
 
 st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
-st.title("🎓 AI Adoption in the Middle East Current Trends and Insights")
+
+# Page header
+st.title("🎓 Predict Free Time Using ML")
 st.markdown("""
 Welcome to your interactive machine learning dashboard!
 
-- Load trained model from pickle
-- Select features
-- Predict free time instantly
+- 💾 Load trained model from pickle
+- 🎯 Select features
+- 🧠 Predict free time instantly
 """)
 
 # Load dataset from GitHub
@@ -50,23 +55,56 @@ try:
 
         if all(col in df.columns for col in feature_cols + [target_col]):
             st.success("✅ Dataset loaded from GitHub successfully!")
-            st.subheader("📄 Data Preview")
-            st.dataframe(df.head())
 
+            # Preview dataset
+            with st.expander("📄 Preview Data"):
+                st.dataframe(df.head())
+
+            # Layout input columns
             st.subheader("🔮 Make a New Prediction")
+            cols = st.columns(3)
             user_input = {}
-            for col in feature_cols:
-                if col in encoders:
-                    input_val = st.selectbox(f"{col}", list(encoders[col].classes_))
-                    user_input[col] = encoders[col].transform([input_val])[0]
-                else:
-                    user_input[col] = st.number_input(f"{col}", value=float(df[col].mean()))
+            for i, col in enumerate(feature_cols):
+                with cols[i % 3]:
+                    if col in encoders:
+                        input_val = st.selectbox(f"{col}", list(encoders[col].classes_))
+                        user_input[col] = encoders[col].transform([input_val])[0]
+                    else:
+                        user_input[col] = st.number_input(f"{col}", value=float(df[col].mean()))
 
-            if st.button("Predict Free Time"):
+            if st.button("📌 Predict Free Time"):
                 input_df = pd.DataFrame([user_input])
                 prediction = model.predict(input_df)
                 predicted_label = label_encoder.inverse_transform(prediction)[0]
                 st.success(f"🕒 Predicted Free Time: {predicted_label}")
+
+                # Evaluation
+                y_true = label_encoder.transform(df[target_col])
+                X_encoded = df[feature_cols].copy()
+                for col in encoders:
+                    if col in X_encoded.columns:
+                        X_encoded[col] = encoders[col].transform(X_encoded[col])
+                y_pred_all = model.predict(X_encoded)
+
+                # Classification report
+                st.markdown("### 🧾 Classification Report")
+                report = classification_report(y_true, y_pred_all, target_names=label_encoder.classes_, output_dict=True)
+                st.dataframe(pd.DataFrame(report).transpose())
+
+                # Confusion matrix
+                st.markdown("### 🔍 Confusion Matrix")
+                fig, ax = plt.subplots(figsize=(6, 4))
+                ConfusionMatrixDisplay.from_predictions(y_true, y_pred_all, display_labels=label_encoder.classes_, ax=ax, cmap='Blues')
+                st.pyplot(fig)
+
+                # Feature importance
+                if hasattr(model, 'feature_importances_'):
+                    st.markdown("### 📊 Feature Importance")
+                    importances = pd.Series(model.feature_importances_, index=feature_cols)
+                    fig2, ax2 = plt.subplots(figsize=(6, 4))
+                    importances.sort_values().plot(kind='barh', ax=ax2)
+                    ax2.set_title("Feature Importance")
+                    st.pyplot(fig2)
 
         else:
             st.warning("⚠️ Dataset does not contain the required columns for prediction.")
