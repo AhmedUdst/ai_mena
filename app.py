@@ -7,7 +7,7 @@ import joblib
 import os
 
 st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
-st.title("🎓 Predict Free Time Using ML")
+st.title("🎓 AI Adoption in the Middle East Current Trends and Insights")
 st.markdown("""
 Welcome to your interactive machine learning dashboard!
 
