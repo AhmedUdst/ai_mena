@@ -44,8 +44,13 @@ try:
         # Drop NA and reset index
         df = df[[target_col] + feature_cols].dropna().reset_index(drop=True)
 
-        # Encode all columns
-        for col in df.columns:
+        # Save original labels for decoding predictions later
+        label_encoder = LabelEncoder()
+        df[target_col] = label_encoder.fit_transform(df[target_col].astype(str))
+        class_labels = label_encoder.classes_
+
+        # Encode features
+        for col in feature_cols:
             if df[col].dtype == 'object':
                 df[col] = LabelEncoder().fit_transform(df[col].astype(str))
 
@@ -88,6 +93,11 @@ try:
         y_pred_voting = voting_clf.predict(X_test)
         report = classification_report(y_test, y_pred_voting, output_dict=True)
         st.dataframe(pd.DataFrame(report).transpose())
+
+        # Show decoded predictions
+        st.subheader("🔮 Sample Predictions")
+        decoded_preds = label_encoder.inverse_transform(y_pred_voting[:10])
+        st.write(decoded_preds)
 
     else:
         st.warning("⚠️ Please select at least one feature column.")
