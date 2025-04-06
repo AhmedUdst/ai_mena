@@ -5,6 +5,7 @@ import io
 import re
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
 
 st.set_page_config(page_title="📊 Free Time Data Explorer", layout="wide")
 
@@ -37,16 +38,16 @@ try:
 
     if df[selected_col].dtype == 'object':
         st.write(df[selected_col].value_counts())
-        fig, ax = plt.subplots()
-        df[selected_col].value_counts().plot(kind='bar', ax=ax)
-        ax.set_title(f"Distribution of {selected_col}")
-        st.pyplot(fig)
+        fig = px.bar(df[selected_col].value_counts().reset_index(), 
+                     x='index', y=selected_col, 
+                     labels={'index': selected_col, selected_col: 'Count'},
+                     title=f"Distribution of {selected_col}")
+        st.plotly_chart(fig)
     else:
         st.write(df[selected_col].describe())
-        fig, ax = plt.subplots()
-        sns.histplot(df[selected_col], kde=True, ax=ax)
-        ax.set_title(f"Distribution of {selected_col}")
-        st.pyplot(fig)
+        fig = px.histogram(df, x=selected_col, marginal="rug", nbins=30,
+                           title=f"Distribution of {selected_col}")
+        st.plotly_chart(fig)
 
     # Correlation heatmap
     if st.checkbox("📌 Show correlation heatmap (numeric only)"):
@@ -56,6 +57,13 @@ try:
         sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', ax=ax)
         ax.set_title("Correlation Heatmap")
         st.pyplot(fig)
+
+    # Pairwise relationships
+    if st.checkbox("📈 Show Pairplot (slow)"):
+        pair_cols = st.multiselect("Select columns for pairplot", df.select_dtypes(include='number').columns.tolist(), default=df.select_dtypes(include='number').columns[:3])
+        if len(pair_cols) > 1:
+            fig = sns.pairplot(df[pair_cols])
+            st.pyplot(fig)
 
 except Exception as e:
     st.error(f"❌ Failed to load dataset from GitHub: {e}")
