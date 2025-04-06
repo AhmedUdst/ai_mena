@@ -110,10 +110,6 @@ try:
                 report = classification_report(y_test, y_pred, target_names=label_encoder.classes_, output_dict=True)
                 st.dataframe(pd.DataFrame(report).transpose())
 
-                st.markdown("### 🔍 Confusion Matrix")
-                fig, ax = plt.subplots(figsize=(6, 4))
-                ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=label_encoder.classes_, ax=ax, cmap='Blues')
-                st.pyplot(fig)
 
         else:
             st.warning("⚠️ Dataset is missing required columns!")
