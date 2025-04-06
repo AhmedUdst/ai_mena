@@ -17,12 +17,19 @@ if theme == "Dark":
     st.markdown(
         """
         <style>
-        body {
+        body, .stApp, .css-ffhzg2 {
             background-color: #0e1117;
-            color: #c7c7c7;
+            color: #e1e1e1;
         }
-        .stApp {
-            background-color: #0e1117;
+        .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+            color: #f0f0f0;
+        }
+        .stButton>button {
+            background-color: #1f77b4;
+            color: white;
+        }
+        .stSelectbox, .stNumberInput input {
+            color: black !important;
         }
         </style>
         """,
