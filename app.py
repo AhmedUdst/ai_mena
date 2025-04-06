@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import requests
+import io
 import re
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -9,67 +11,86 @@ from sklearn.naive_bayes import CategoricalNB
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, f1_score
 
-st.title("📊 ML Model Comparison App")
-st.markdown("Upload a CSV file, select your target column, and compare ML classifiers.")
+st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
+st.title("🎓 Predict Free Time Using ML")
+st.markdown("""
+Welcome to your interactive machine learning dashboard!
 
-# File uploader
-file = st.file_uploader("Upload CSV file", type=["csv"])
+- Load data from GitHub
+- Select target & features
+- Compare multiple ML models
+""")
 
-if file:
-    df = pd.read_csv(file)
-    st.subheader("📄 Raw Data Preview")
-    st.dataframe(df.head())
+# Step 1: Load dataset from GitHub
+with st.sidebar:
+    st.header("📂 Load Dataset")
+    url = st.text_input("Enter GitHub CSV Raw URL:",
+                        "https://raw.githubusercontent.com/yourusername/yourrepo/main/dataset.csv")
+    load_button = st.button("Load Dataset")
 
-    # Select target column
-    target_col = st.selectbox("🎯 Select the target column (what you want to predict)", df.columns)
+if load_button:
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        df = pd.read_csv(io.StringIO(response.text))
 
-    # Preprocess
-    df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
-    categorical_cols = [col for col in df.columns if col != target_col]
+        # Clean column names
+        df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
 
-    # Drop rows with missing values (or handle differently)
-    df = df.dropna()
+        st.success("✅ Dataset loaded successfully!")
+        st.subheader("📄 Data Preview")
+        st.dataframe(df.head())
 
-    # Encode features
-    for col in categorical_cols:
-        df[col] = LabelEncoder().fit_transform(df[col].astype(str))
-    df[target_col] = LabelEncoder().fit_transform(df[target_col].astype(str))
+        # Target and feature selection
+        st.sidebar.header("🎯 Select Target and Features")
+        target_col = st.sidebar.selectbox("Select target column (e.g., free_time)", df.columns)
+        feature_cols = st.sidebar.multiselect("Select feature columns", [col for col in df.columns if col != target_col])
 
-    X = df[categorical_cols]
-    y = df[target_col]
+        if feature_cols:
+            # Drop NA and reset index
+            df = df[[target_col] + feature_cols].dropna().reset_index(drop=True)
 
-    # Train/test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            # Encode all columns
+            for col in df.columns:
+                if df[col].dtype == 'object':
+                    df[col] = LabelEncoder().fit_transform(df[col].astype(str))
 
-    # Define models
-    rf = RandomForestClassifier(random_state=42, class_weight='balanced')
-    lr = LogisticRegression(max_iter=1000, class_weight='balanced', random_state=42)
-    nb = CategoricalNB()
-    xgb = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=42)
-    voting_clf = VotingClassifier(estimators=[('rf', rf), ('lr', lr), ('nb', nb)], voting='soft')
+            X = df[feature_cols]
+            y = df[target_col]
 
-    models = {
-        "Random Forest": rf,
-        "Logistic Regression": lr,
-        "Naive Bayes": nb,
-        "XGBoost": xgb,
-        "Voting Classifier": voting_clf
-    }
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Evaluate
-    summary = []
-    for name, model in models.items():
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-        summary.append({
-            "Model": name,
-            "Accuracy": round(accuracy_score(y_test, y_pred), 3),
-            "Macro F1": round(f1_score(y_test, y_pred, average='macro'), 3),
-            "Weighted F1": round(f1_score(y_test, y_pred, average='weighted'), 3)
-        })
+            # Define models
+            rf = RandomForestClassifier(random_state=42, class_weight='balanced')
+            lr = LogisticRegression(max_iter=1000, class_weight='balanced', random_state=42)
+            nb = CategoricalNB()
+            xgb = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=42)
+            voting_clf = VotingClassifier(estimators=[('rf', rf), ('lr', lr), ('nb', nb)], voting='soft')
 
-    st.subheader("📊 Model Comparison Summary")
-    st.dataframe(pd.DataFrame(summary))
+            models = {
+                "Random Forest": rf,
+                "Logistic Regression": lr,
+                "Naive Bayes": nb,
+                "XGBoost": xgb,
+                "Voting Classifier": voting_clf
+            }
 
-else:
-    st.info("Upload a CSV file to begin.")
+            st.subheader("📊 Model Performance")
+            summary = []
+            for name, model in models.items():
+                model.fit(X_train, y_train)
+                y_pred = model.predict(X_test)
+                summary.append({
+                    "Model": name,
+                    "Accuracy": round(accuracy_score(y_test, y_pred), 3),
+                    "Macro F1": round(f1_score(y_test, y_pred, average='macro'), 3),
+                    "Weighted F1": round(f1_score(y_test, y_pred, average='weighted'), 3)
+                })
+
+            st.dataframe(pd.DataFrame(summary))
+
+        else:
+            st.warning("⚠️ Please select at least one feature column.")
+
+    except Exception as e:
+        st.error(f"❌ Failed to load dataset: {e}")
