@@ -4,7 +4,6 @@ import requests
 import io
 import re
 import joblib
-from sklearn.preprocessing import LabelEncoder
 
 st.set_page_config(page_title="📊 Free Time Predictor", layout="wide")
 st.title("🎓 Predict Free Time Using ML")
@@ -16,7 +15,7 @@ Welcome to your interactive machine learning dashboard!
 - Predict free time instantly
 """)
 
-# Load dataset from GitHub (fixed link)
+# Load dataset from GitHub
 github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/dataset.csv"
 try:
     response = requests.get(github_url)
@@ -30,11 +29,14 @@ try:
     if 'id' in df.columns:
         df.drop(columns='id', inplace=True)
 
-    # Use fixed feature list to match the trained model
+    # Load model and encoders
+    model = joblib.load("voting_model.pkl")
+    label_encoder = joblib.load("label_encoder.pkl")
+    encoders = joblib.load("feature_encoders.pkl")
+    feature_cols = joblib.load("feature_columns.pkl")
     target_col = "free_time"
-    feature_cols = ['gender', 'field', 'impact_learing', 'knowledge', 'dependent', 'restriction', 'frequency', 'output']
 
-    # Ensure only relevant columns are included
+    # Ensure dataset has necessary columns
     columns_needed = [target_col] + feature_cols
     df = df[[col for col in columns_needed if col in df.columns]].dropna().reset_index(drop=True)
 
@@ -42,11 +44,6 @@ try:
         st.success("✅ Dataset loaded from GitHub successfully!")
         st.subheader("📄 Data Preview")
         st.dataframe(df.head())
-
-        # Load encoders and model
-        model = joblib.load("voting_model.pkl")
-        label_encoder = joblib.load("label_encoder.pkl")
-        encoders = joblib.load("feature_encoders.pkl")
 
         st.subheader("🔮 Make a New Prediction")
         user_input = {}
