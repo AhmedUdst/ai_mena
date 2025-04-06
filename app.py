@@ -17,7 +17,7 @@ Welcome to your interactive machine learning dashboard!
 """)
 
 # Load dataset from GitHub (fixed link)
-github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/refs/heads/main/dataset.csv"
+github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/dataset.csv"
 try:
     response = requests.get(github_url)
     response.raise_for_status()
@@ -26,20 +26,18 @@ try:
     # Clean column names
     df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
 
-    # Drop 'id' if it exists
-    if 'id' in df.columns:
-        df.drop(columns='id', inplace=True)
-
-    st.success("✅ Dataset loaded from GitHub successfully!")
-    st.subheader("📄 Data Preview")
-    st.dataframe(df.head())
-
     # Use fixed feature list to match the trained model
     target_col = "free_time"
     feature_cols = ['gender', 'field', 'impact_learing', 'knowledge', 'dependent', 'restriction', 'frequency', 'output']
 
+    # Ensure only relevant columns are included
+    columns_needed = [target_col] + feature_cols
+    df = df[[col for col in columns_needed if col in df.columns]].dropna().reset_index(drop=True)
+
     if all(col in df.columns for col in feature_cols + [target_col]):
-        df = df[[target_col] + feature_cols].dropna().reset_index(drop=True)
+        st.success("✅ Dataset loaded from GitHub successfully!")
+        st.subheader("📄 Data Preview")
+        st.dataframe(df.head())
 
         # Load encoders and model
         model = joblib.load("voting_model.pkl")
