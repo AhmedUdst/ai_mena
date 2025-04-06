@@ -1,0 +1,407 @@
+gender,field,frequency,output,learning_impact,knowledge_retention,dependent_on_technology,restriction,free_time
+Male,Computer Science/IT,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Male,Engineering,Occasionally,strong,Significantly reduced,Somewhat hinders,"Yes, significantly",restricted,3-8 hours per week
+Male,Natural Sciences,Very frequently,stronger,Significantly improved,Somewhat hinders,"Yes, certain areas",guidelines,8+ hours per week
+Male,Engineering,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Male,Business/Finance,Rarely,basic,No impact,No effect,"Yes, significantly",restricted,0- 2 hours
+Female,Other ,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, significantly",free,0- 2 hours
+Female,Business/Finance,Never,stronger,No impact,Somewhat helps,No,guidelines,0- 2 hours
+Female,Business/Finance,Never,basic,Significantly improved,Strongly helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Computer Science/IT,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Female,Medicine/Healthcare,Very frequently,strong,Somewhat improved,Strongly helps,"Yes, significantly",Unsure,3-8 hours per week
+Female,Other ,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",Unsure,3-8 hours per week
+Female,Medicine/Healthcare,Very frequently,strong,Significantly improved,Somewhat hinders,"Yes, certain areas",Unsure,0- 2 hours
+Female,Other ,Frequently,strong,Somewhat improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Male,Computer Science/IT,Very frequently,strong,No impact,Strongly helps,No,Unsure,0- 2 hours
+Female,Other ,Never,Poor,No impact,Strongly helps,"Yes, certain areas",Unsure,0- 2 hours
+Female,Other ,Frequently,strong,Somewhat improved,No effect,No,guidelines,0- 2 hours
+Female,Other ,Rarely,Poor,No impact,Somewhat helps,No,free,3-8 hours per week
+Female,Other ,Occasionally,basic,Somewhat improved,Somewhat helps,No,free,3-8 hours per week
+Female,Medicine/Healthcare,Occasionally,basic,Somewhat improved,Strongly helps,"Yes, significantly",guidelines,0- 2 hours
+Female,Medicine/Healthcare,Very frequently,strong,Somewhat improved,Strongly hinders,"Yes, significantly",Unsure,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,stronger,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Computer Science/IT,Very frequently,strong,Somewhat improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Male,Computer Science/IT,Frequently,stronger,Significantly reduced,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Computer Science/IT,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Computer Science/IT,Very frequently,stronger,Somewhat improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Prefer not to state,Computer Science/IT,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Male,Computer Science/IT,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",free,3-8 hours per week
+Female,Computer Science/IT,Very frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Computer Science/IT,Very frequently,basic,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Computer Science/IT,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",restricted,0- 2 hours
+Male,Engineering,Occasionally,basic,Somewhat improved,Strongly helps,"Yes, significantly",restricted,0- 2 hours
+Male,Computer Science/IT,Very frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Very frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",free,3-8 hours per week
+Male,Business/Finance,Occasionally,stronger,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,0- 2 hours
+Male,Engineering,Occasionally,basic,Somewhat decreased,Somewhat helps,"Yes, significantly",free,0- 2 hours
+Male,Engineering,Very frequently,basic,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Occasionally,basic,Significantly improved,Strongly helps,"Yes, significantly",restricted,0- 2 hours
+Male,Engineering,Never,stronger,Significantly improved,Strongly helps,"Yes, significantly",restricted,3-8 hours per week
+Male,Other ,Occasionally,strong,Somewhat improved,Somewhat helps,No,guidelines,8+ hours per week
+Male,Engineering,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,0- 2 hours
+Male,Engineering,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Male,Other ,Never,Poor,No impact,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Male,Humanities/Social Sciences,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Male,Computer Science/IT,Frequently,basic,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, certain areas",restricted,3-8 hours per week
+Male,Computer Science/IT,Very frequently,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Male,Computer Science/IT,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",free,8+ hours per week
+Female,Engineering,Occasionally,basic,No impact,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Female,Business/Finance,Very frequently,stronger,Significantly improved,No effect,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Very frequently,basic,Somewhat improved,Strongly helps,"Yes, certain areas",free,3-8 hours per week
+Male,Computer Science/IT,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, significantly",free,3-8 hours per week
+Male,Computer Science/IT,Frequently,stronger,Significantly reduced,Strongly hinders,"Yes, significantly",guidelines,8+ hours per week
+Male,Business/Finance,Frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Occasionally,strong,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Business/Finance,Frequently,basic,Somewhat decreased,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,No,free,3-8 hours per week
+Female,Computer Science/IT,Very frequently,basic,Somewhat improved,Somewhat hinders,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Frequently,Poor,Significantly improved,Somewhat hinders,"Yes, significantly",guidelines,3-8 hours per week
+Prefer not to state,Medicine/Healthcare,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Rarely,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,0- 2 hours
+Male,Medicine/Healthcare,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Engineering,Very frequently,stronger,Somewhat improved,Somewhat helps,No,guidelines,8+ hours per week
+Female,Business/Finance,Frequently,strong,No impact,Strongly helps,"Yes, significantly",free,3-8 hours per week
+Male,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,No,restricted,3-8 hours per week
+Female,Computer Science/IT,Frequently,basic,Significantly improved,Strongly helps,"Yes, significantly",free,0- 2 hours
+Female,Medicine/Healthcare,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Computer Science/IT,Very frequently,strong,Significantly reduced,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Male,Natural Sciences,Occasionally,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,basic,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Medicine/Healthcare,Occasionally,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Other ,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",Unsure,0- 2 hours
+Female,Computer Science/IT,Very frequently,basic,Significantly improved,No effect,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,stronger,Somewhat improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Male,Business/Finance,Very frequently,strong,Somewhat improved,Somewhat helps,No,guidelines,0- 2 hours
+Male,Engineering,Rarely,strong,Significantly improved,No effect,No,restricted,3-8 hours per week
+Female,Business/Finance,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Male,Computer Science/IT,Frequently,stronger,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,No effect,"Yes, certain areas",restricted,8+ hours per week
+Female,Medicine/Healthcare,Frequently,strong,Somewhat improved,Strongly helps,No,guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Computer Science/IT,Very frequently,strong,Significantly improved,Strongly helps,No,guidelines,8+ hours per week
+Male,Business/Finance,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Female,Business/Finance,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",free,0- 2 hours
+Female,Business/Finance,Occasionally,stronger,Somewhat improved,Somewhat helps,No,guidelines,3-8 hours per week
+Female,Computer Science/IT,Frequently,stronger,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Engineering,Frequently,strong,Significantly improved,Strongly helps,No,guidelines,8+ hours per week
+Female,Business/Finance,Never,basic,No impact,No effect,No,guidelines,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",restricted,8+ hours per week
+Male,Engineering,Very frequently,basic,Somewhat improved,No effect,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",free,3-8 hours per week
+Female,Medicine/Healthcare,Occasionally,basic,Significantly improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Male,Engineering,Frequently,strong,Somewhat decreased,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Computer Science/IT,Occasionally,strong,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Engineering,Occasionally,strong,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Medicine/Healthcare,Very frequently,basic,No impact,No effect,No,guidelines,3-8 hours per week
+Female,Engineering,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Female,Engineering,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Male,Computer Science/IT,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Computer Science/IT,Frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Engineering,Very frequently,strong,Somewhat improved,Somewhat helps,No,guidelines,0- 2 hours
+Male,Computer Science/IT,Very frequently,stronger,Significantly improved,Strongly helps,No,Unsure,8+ hours per week
+Male,Engineering,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Business/Finance,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Occasionally,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,0- 2 hours
+Prefer not to state,Engineering,Occasionally,basic,No impact,No effect,"Yes, certain areas",restricted,0- 2 hours
+Female,Other ,Occasionally,basic,Significantly improved,Strongly helps,No,free,3-8 hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly reduced,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Female,Business/Finance,Occasionally,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,strong,Somewhat improved,Strongly helps,"Yes, certain areas",free,0- 2 hours
+Female,Business/Finance,Occasionally,basic,No impact,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Rarely,strong,No impact,No effect,No,Unsure,0- 2 hours
+Male,Engineering,Rarely,basic,Somewhat improved,Somewhat hinders,"Yes, certain areas",Unsure,8+ hours per week
+Female,Engineering,Occasionally,basic,Significantly improved,Strongly helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Computer Science/IT,Never,basic,No impact,Somewhat hinders,"Yes, certain areas",restricted,3-8 hours per week
+Male,Business/Finance,Occasionally,strong,Significantly improved,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Male,Engineering,Occasionally,basic,Somewhat decreased,Somewhat hinders,"Yes, significantly",restricted,3-8 hours per week
+Male,Engineering,Occasionally,basic,Significantly improved,No effect,"Yes, significantly",free,3-8 hours per week
+Male,Medicine/Healthcare,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Occasionally,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Medicine/Healthcare,Occasionally,basic,Somewhat improved,No effect,"Yes, significantly",guidelines,3-8 hours per week
+Female,Engineering,Very frequently,stronger,Somewhat decreased,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Computer Science/IT,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Male,Computer Science/IT,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Engineering,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, certain areas",guidelines,0- 2 hours
+Female,Computer Science/IT,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Female,Medicine/Healthcare,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, significantly",Unsure,0- 2 hours
+Female,Other ,Frequently,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Medicine/Healthcare,Frequently,basic,Significantly improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Computer Science/IT,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Frequently,strong,No impact,Somewhat hinders,"Yes, significantly",free,8+ hours per week
+Male,Engineering,Very frequently,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Engineering,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Male,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,No,free,8+ hours per week
+Male,Business/Finance,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Female,Engineering,Frequently,stronger,Significantly improved,Strongly helps,No,guidelines,8+ hours per week
+Male,Engineering,Very frequently,basic,Significantly improved,Somewhat hinders,No,restricted,3-8 hours per week
+Female,Engineering,Occasionally,basic,Significantly improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Male,Engineering,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Male,Computer Science/IT,Rarely,strong,Significantly improved,Somewhat helps,No,free,3-8 hours per week
+Female,Business/Finance,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Male,Engineering,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Very frequently,stronger,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Male,Medicine/Healthcare,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,0- 2 hours
+Female,Business/Finance,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Frequently,basic,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Occasionally,stronger,Significantly improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Female,Other ,Very frequently,basic,Significantly improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Male,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Male,Computer Science/IT,Occasionally,basic,Somewhat improved,No effect,No,free,3-8 hours per week
+Female,Engineering,Occasionally,strong,Somewhat improved,Strongly helps,"Yes, significantly",guidelines,0- 2 hours
+Female,Business/Finance,Frequently,basic,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Engineering,Never,stronger,No impact,Strongly helps,"Yes, significantly",free,0- 2 hours
+Female,Engineering,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",free,0- 2 hours
+Male,Engineering,Very frequently,basic,Somewhat improved,Somewhat helps,No,restricted,0- 2 hours
+Prefer not to state,Engineering,Frequently,strong,Significantly improved,Somewhat helps,No,guidelines,3-8 hours per week
+Female,Engineering,Very frequently,strong,Somewhat decreased,No effect,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,stronger,No impact,Somewhat helps,"Yes, significantly",restricted,0- 2 hours
+Female,Engineering,Frequently,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Male,Business/Finance,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Frequently,strong,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Male,Engineering,Occasionally,basic,Somewhat improved,Somewhat helps,No,restricted,3-8 hours per week
+Male,Engineering,Frequently,strong,Somewhat improved,Somewhat helps,No,free,8+ hours per week
+Female,Business/Finance,Frequently,strong,Significantly improved,Somewhat hinders,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Very frequently,stronger,Somewhat decreased,Somewhat hinders,"Yes, certain areas",free,3-8 hours per week
+Female,Business/Finance,Rarely,basic,Somewhat improved,No effect,No,guidelines,0- 2 hours
+Female,Business/Finance,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,stronger,Significantly improved,Strongly helps,No,guidelines,3-8 hours per week
+Female,Other ,Occasionally,stronger,Significantly improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Engineering,Occasionally,stronger,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",free,3-8 hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Business/Finance,Frequently,basic,Significantly improved,Somewhat helps,No,guidelines,8+ hours per week
+Female,Engineering,Occasionally,strong,Significantly improved,No effect,No,free,0- 2 hours
+Female,Other ,Rarely,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,strong,Significantly reduced,No effect,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",free,8+ hours per week
+Male,Computer Science/IT,Occasionally,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,basic,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,basic,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",restricted,3-8 hours per week
+Female,Engineering,Frequently,stronger,Somewhat improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Medicine/Healthcare,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Engineering,Frequently,basic,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Engineering,Frequently,strong,Significantly improved,Strongly helps,No,guidelines,8+ hours per week
+Male,Business/Finance,Rarely,strong,Significantly reduced,No effect,No,free,0- 2 hours
+Female,Engineering,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Engineering,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, significantly",free,8+ hours per week
+Female,Business/Finance,Frequently,strong,Somewhat improved,Somewhat helps,No,guidelines,8+ hours per week
+Male,Business/Finance,Very frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Male,Medicine/Healthcare,Occasionally,basic,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Rarely,basic,Significantly improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Female,Computer Science/IT,Occasionally,stronger,Somewhat improved,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Engineering,Frequently,basic,No impact,Somewhat helps,"Yes, certain areas",Unsure,3-8 hours per week
+Female,Computer Science/IT,Frequently,basic,Somewhat improved,Strongly helps,"Yes, significantly",free,3-8 hours per week
+Female,Computer Science/IT,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",restricted,8+ hours per week
+Male,Computer Science/IT,Rarely,basic,Somewhat improved,Somewhat helps,No,free,8+ hours per week
+Female,Engineering,Occasionally,stronger,Significantly improved,Strongly helps,No,free,3-8 hours per week
+Female,Computer Science/IT,Frequently,strong,Significantly reduced,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Engineering,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",free,0- 2 hours
+Female,Medicine/Healthcare,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Occasionally,basic,Somewhat improved,Strongly helps,No,guidelines,3-8 hours per week
+Male,Business/Finance,Frequently,strong,Somewhat improved,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Computer Science/IT,Rarely,basic,No impact,Strongly helps,No,Unsure,0- 2 hours
+Female,Engineering,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",free,3-8 hours per week
+Female,Business/Finance,Frequently,strong,Somewhat improved,Strongly helps,"Yes, certain areas",free,0- 2 hours
+Male,Engineering,Occasionally,stronger,Significantly improved,Strongly helps,"Yes, significantly",Unsure,0- 2 hours
+Male,Computer Science/IT,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",restricted,8+ hours per week
+Male,Engineering,Very frequently,stronger,Somewhat improved,Strongly helps,"Yes, significantly",Unsure,8+ hours per week
+Male,Engineering,Occasionally,strong,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Engineering,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Male,Engineering,Frequently,stronger,No impact,No effect,"Yes, certain areas",guidelines,0- 2 hours
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, significantly",free,0- 2 hours
+Male,Engineering,Frequently,stronger,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Occasionally,strong,No impact,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Male,Computer Science/IT,Frequently,strong,Significantly improved,Somewhat hinders,No,guidelines,8+ hours per week
+Female,Business/Finance,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Engineering,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Male,Business/Finance,Very frequently,basic,Significantly reduced,Strongly hinders,"Yes, significantly",free,3-8 hours per week
+Male,Computer Science/IT,Rarely,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Male,Computer Science/IT,Very frequently,basic,No impact,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Female,Business/Finance,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",Unsure,8+ hours per week
+Male,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, certain areas",free,8+ hours per week
+Female,Computer Science/IT,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Engineering,Frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Rarely,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,0- 2 hours
+Female,Medicine/Healthcare,Occasionally,stronger,Somewhat improved,No effect,No,guidelines,8+ hours per week
+Male,Engineering,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Male,Engineering,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Male,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",free,8+ hours per week
+Female,Engineering,Never,basic,Somewhat improved,Somewhat helps,No,Unsure,0- 2 hours
+Male,Engineering,Frequently,basic,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,stronger,Significantly improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Medicine/Healthcare,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",Unsure,0- 2 hours
+Male,Business/Finance,Occasionally,basic,No impact,Somewhat helps,"Yes, certain areas",restricted,3-8 hours per week
+Male,Engineering,Occasionally,strong,Somewhat improved,No effect,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,stronger,Significantly reduced,Strongly helps,"Yes, significantly",free,0- 2 hours
+Female,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Medicine/Healthcare,Frequently,strong,Significantly improved,Strongly helps,No,guidelines,3-8 hours per week
+Male,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,0- 2 hours
+Female,Engineering,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",restricted,8+ hours per week
+Female,Business/Finance,Rarely,basic,No impact,Somewhat hinders,"Yes, significantly",restricted,3-8 hours per week
+Male,Engineering,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Male,Engineering,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Female,Medicine/Healthcare,Rarely,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Engineering,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, significantly",free,8+ hours per week
+Prefer not to state,Medicine/Healthcare,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,0- 2 hours
+Male,Engineering,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Business/Finance,Rarely,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Business/Finance,Frequently,strong,Somewhat improved,Strongly helps,No,guidelines,8+ hours per week
+Male,Business/Finance,Occasionally,strong,No impact,Somewhat helps,No,guidelines,0- 2 hours
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,No,restricted,8+ hours per week
+Female,Computer Science/IT,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",restricted,0- 2 hours
+Female,Business/Finance,Rarely,strong,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Male,Business/Finance,Never,Poor,No impact,No effect,"Yes, significantly",Unsure,0- 2 hours
+Male,Computer Science/IT,Frequently,stronger,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Male,Business/Finance,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",Unsure,8+ hours per week
+Female,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Medicine/Healthcare,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Engineering,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Business/Finance,Never,stronger,Significantly reduced,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",restricted,8+ hours per week
+Female,Business/Finance,Occasionally,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Female,Business/Finance,Frequently,strong,Significantly improved,Somewhat helps,No,guidelines,3-8 hours per week
+Female,Computer Science/IT,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Business/Finance,Rarely,stronger,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Rarely,strong,Somewhat improved,No effect,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,No,guidelines,3-8 hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",free,8+ hours per week
+Male,Computer Science/IT,Occasionally,strong,No impact,No effect,No,free,3-8 hours per week
+Male,Engineering,Occasionally,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Computer Science/IT,Very frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Engineering,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Engineering,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Male,Engineering,Occasionally,strong,No impact,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Computer Science/IT,Very frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Prefer not to state,Computer Science/IT,Frequently,stronger,Significantly reduced,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,basic,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Humanities/Social Sciences,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly reduced,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Engineering,Frequently,stronger,Somewhat improved,No effect,"Yes, significantly",free,0- 2 hours
+Male,Engineering,Frequently,basic,Significantly improved,No effect,"Yes, significantly",free,0- 2 hours
+Male,Computer Science/IT,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",free,8+ hours per week
+Prefer not to state,Engineering,Rarely,strong,No impact,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,basic,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Somewhat helps,No,guidelines,8+ hours per week
+Male,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Engineering,Occasionally,strong,Somewhat improved,No effect,"Yes, certain areas",restricted,3-8 hours per week
+Female,Business/Finance,Frequently,strong,No impact,Somewhat hinders,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Occasionally,stronger,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Medicine/Healthcare,Rarely,stronger,Somewhat improved,Somewhat helps,"Yes, significantly",Unsure,0- 2 hours
+Female,Engineering,Rarely,basic,No impact,Somewhat hinders,"Yes, significantly",guidelines,0- 2 hours
+Male,Engineering,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",restricted,8+ hours per week
+Female,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Business/Finance,Occasionally,basic,No impact,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Engineering,Occasionally,strong,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Male,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Occasionally,strong,Somewhat improved,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Very frequently,strong,Somewhat improved,Somewhat helps,No,Unsure,3-8 hours per week
+Female,Medicine/Healthcare,Very frequently,stronger,Significantly improved,Somewhat helps,"Yes, certain areas",restricted,0- 2 hours
+Male,Business/Finance,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",restricted,0- 2 hours
+Female,Engineering,Occasionally,basic,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Female,Business/Finance,Frequently,strong,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Male,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,3-8 hours per week
+Male,Engineering,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Computer Science/IT,Occasionally,strong,Somewhat improved,Strongly helps,No,free,8+ hours per week
+Female,Engineering,Frequently,stronger,Significantly improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Male,Engineering,Occasionally,basic,No impact,No effect,"Yes, significantly",guidelines,3-8 hours per week
+Male,Engineering,Frequently,basic,Somewhat improved,Strongly helps,"Yes, certain areas",restricted,8+ hours per week
+Male,Engineering,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Female,Engineering,Rarely,basic,Somewhat decreased,Somewhat hinders,"Yes, certain areas",guidelines,8+ hours per week
+Female,Other ,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,3-8 hours per week
+Female,Medicine/Healthcare,Occasionally,basic,Significantly reduced,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Frequently,stronger,Somewhat decreased,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Prefer not to state,Business/Finance,Occasionally,strong,Significantly improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,0- 2 hours
+Male,Computer Science/IT,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Male,Engineering,Frequently,strong,Somewhat improved,No effect,"Yes, certain areas",free,3-8 hours per week
+Male,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",free,3-8 hours per week
+Female,Engineering,Occasionally,strong,Significantly improved,Strongly helps,"Yes, certain areas",free,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,strong,Somewhat improved,No effect,No,guidelines,8+ hours per week
+Female,Medicine/Healthcare,Rarely,basic,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Rarely,basic,Significantly improved,Strongly helps,No,guidelines,3-8 hours per week
+Female,Computer Science/IT,Occasionally,strong,Significantly improved,Strongly helps,No,restricted,3-8 hours per week
+Prefer not to state,Engineering,Never,basic,No impact,Strongly hinders,"Yes, significantly",restricted,0- 2 hours
+Male,Engineering,Frequently,stronger,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Business/Finance,Frequently,strong,Significantly improved,Somewhat helps,No,guidelines,0- 2 hours
+Male,Engineering,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,0- 2 hours
+Female,Business/Finance,Very frequently,basic,Significantly improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,strong,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,0- 2 hours
+Female,Business/Finance,Occasionally,basic,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Male,Engineering,Frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,strong,Somewhat improved,Somewhat hinders,"Yes, certain areas",restricted,8+ hours per week
+Male,Computer Science/IT,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Medicine/Healthcare,Occasionally,basic,Significantly improved,Strongly helps,No,guidelines,0- 2 hours
+Female,Business/Finance,Frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",guidelines,8+ hours per week
+Female,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Frequently,basic,Significantly improved,Somewhat helps,"Yes, certain areas",restricted,0- 2 hours
+Male,Business/Finance,Frequently,strong,Somewhat decreased,No effect,"Yes, certain areas",free,0- 2 hours
+Female,Computer Science/IT,Frequently,strong,Somewhat improved,Somewhat hinders,No,guidelines,3-8 hours per week
+Male,Business/Finance,Rarely,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,stronger,Significantly improved,Strongly helps,"Yes, significantly",Unsure,8+ hours per week
+Male,Business/Finance,Frequently,strong,Somewhat improved,Strongly helps,No,guidelines,3-8 hours per week
+Female,Engineering,Frequently,stronger,Somewhat improved,Somewhat helps,"Yes, significantly",free,8+ hours per week
+Female,Medicine/Healthcare,Frequently,basic,Somewhat improved,Somewhat helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Occasionally,basic,No impact,Strongly hinders,"Yes, significantly",guidelines,0- 2 hours
+Male,Computer Science/IT,Very frequently,strong,Somewhat improved,No effect,"Yes, significantly",free,3-8 hours per week
+Female,Business/Finance,Frequently,basic,Significantly improved,Somewhat helps,"Yes, certain areas",Unsure,8+ hours per week
+Male,Computer Science/IT,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, certain areas",restricted,3-8 hours per week
+Male,Engineering,Frequently,stronger,Somewhat decreased,Somewhat helps,"Yes, certain areas",Unsure,3-8 hours per week
+Female,Medicine/Healthcare,Frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Engineering,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",free,8+ hours per week
+Female,Business/Finance,Very frequently,strong,No impact,Somewhat helps,"Yes, certain areas",guidelines,3-8 hours per week
+Male,Engineering,Occasionally,strong,No impact,No effect,"Yes, certain areas",restricted,0- 2 hours
+Male,Computer Science/IT,Rarely,basic,Somewhat decreased,Somewhat hinders,"Yes, certain areas",restricted,8+ hours per week
+Male,Engineering,Very frequently,strong,Significantly improved,Somewhat helps,"Yes, certain areas",free,8+ hours per week
+Female,Computer Science/IT,Occasionally,stronger,Significantly improved,Somewhat helps,"Yes, significantly",restricted,3-8 hours per week
+Female,Computer Science/IT,Very frequently,stronger,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,8+ hours per week
+Male,Business/Finance,Very frequently,strong,Significantly improved,Strongly helps,"Yes, significantly",guidelines,3-8 hours per week
+Female,Business/Finance,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
+Female,Business/Finance,Very frequently,strong,Somewhat decreased,Somewhat hinders,"Yes, significantly",restricted,8+ hours per week
+Male,Business/Finance,Very frequently,stronger,Somewhat improved,Somewhat helps,"Yes, significantly",guidelines,3-8 hours per week
+Male,Engineering,Frequently,basic,Significantly improved,No effect,No,free,3-8 hours per week
+Female,Business/Finance,Occasionally,strong,Somewhat improved,Somewhat hinders,"Yes, significantly",guidelines,8+ hours per week
+Female,Computer Science/IT,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",free,8+ hours per week
+Female,Medicine/Healthcare,Frequently,strong,Significantly improved,Somewhat helps,"Yes, significantly",free,8+ hours per week
+Male,Computer Science/IT,Frequently,strong,Somewhat improved,Somewhat helps,"Yes, significantly",restricted,8+ hours per week
+Female,Business/Finance,Frequently,strong,Somewhat decreased,Somewhat helps,"Yes, certain areas",restricted,8+ hours per week
+Male,Engineering,Very frequently,basic,Significantly improved,Strongly helps,No,guidelines,8+ hours per week
+Male,Engineering,Occasionally,strong,No impact,Strongly helps,"Yes, certain areas",guidelines,3-8 hours per week
+Female,Computer Science/IT,Very frequently,stronger,Significantly improved,Strongly helps,"Yes, certain areas",guidelines,8+ hours per week
