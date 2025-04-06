@@ -45,8 +45,7 @@ Welcome to your interactive machine learning dashboard!
 
 # GitHub dataset
 github_url = "https://raw.githubusercontent.com/AhmedUdst/ai_mena/main/clean_dataset.csv"
-st.write("🧩 Feature columns expected by model:", feature_cols)
-st.write("📋 Actual DataFrame columns:", df.columns.tolist())
+
 try:
     response = requests.get(github_url)
     response.raise_for_status()
@@ -61,6 +60,9 @@ try:
     # Load models
     required_files = ["nb_model.pkl", "label_encoder.pkl", "feature_encoders.pkl", "feature_columns.pkl"]
     missing_files = [f for f in required_files if not os.path.exists(f)]
+    
+st.write("🧩 Feature columns expected by model:", feature_cols)
+st.write("📋 Actual DataFrame columns:", df.columns.tolist())
 
     if missing_files:
         st.error(f"❌ Missing model or encoder files: {', '.join(missing_files)}")
