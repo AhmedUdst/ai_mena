@@ -30,13 +30,11 @@ try:
     st.subheader("📄 Data Preview")
     st.dataframe(df.head())
 
-    # Target and feature selection
-    st.sidebar.header("🎯 Select Target and Features")
-    target_col = st.sidebar.selectbox("Select target column (e.g., free_time)", df.columns)
-    feature_cols = st.sidebar.multiselect("Select feature columns", [col for col in df.columns if col != target_col])
+    # Use fixed feature list to match the trained model
+    target_col = "free_time"
+    feature_cols = ['gender', 'field', 'impact_learing', 'knowledge', 'dependent', 'restriction']
 
-    if feature_cols:
-        # Drop NA and reset index
+    if all(col in df.columns for col in feature_cols + [target_col]):
         df = df[[target_col] + feature_cols].dropna().reset_index(drop=True)
 
         # Load encoders and model
@@ -61,7 +59,7 @@ try:
             st.success(f"🕒 Predicted Free Time: {predicted_label}")
 
     else:
-        st.warning("⚠️ Please select at least one feature column.")
+        st.warning("⚠️ Dataset does not contain the required columns for prediction.")
 
 except Exception as e:
     st.error(f"❌ Failed to load dataset from GitHub: {e}")
