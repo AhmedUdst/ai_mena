@@ -26,13 +26,16 @@ try:
     # Clean column names
     df.columns = [re.sub(r"[^\x00-\x7F]+", "", col).strip().lower().replace(" ", "_") for col in df.columns]
 
+    # Drop 'id' if it exists
+    df = df.drop(columns=[col for col in df.columns if col.lower() == 'id'], errors='ignore')
+
     st.success("✅ Dataset loaded from GitHub successfully!")
     st.subheader("📄 Data Preview")
     st.dataframe(df.head())
 
     # Use fixed feature list to match the trained model
     target_col = "free_time"
-    feature_cols = ['gender', 'field', 'impact_learing', 'knowledge', 'dependent', 'restriction']
+    feature_cols = ['gender', 'field', 'impact_learing', 'knowledge', 'dependent', 'restriction', 'frequency', 'output']
 
     if all(col in df.columns for col in feature_cols + [target_col]):
         df = df[[target_col] + feature_cols].dropna().reset_index(drop=True)
